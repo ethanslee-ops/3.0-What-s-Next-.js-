@@ -1,0 +1,30 @@
+/* style.module.scss (Updated) */
+
+.cardContainer{
+    // Height ensures there's enough scroll space for each card to animate
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 1000px;
+    height: 500px;
+    // Makes the card stick to the viewport as you scroll
+    position: sticky; 
+    // z-index ensures cards stack correctly, with the one being scrolled *into* appearing on top
+    
+    /* Ensure the card content is centered and visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+    /* Add box shadow or other styling */
+}
+
+/* Add styles for the card content like title/body */
+.body {
+    // ...
+}
