@@ -33,10 +33,10 @@ export default function Card({title, src, link, color, i, progress, range, targe
                 <div className={styles.body}>
                     <div className={styles.imageContainer}>
                         <Image
-                            // Assuming images are in the public directory
                             src={`/${src}`} 
                             alt={title}
-                            fill={true} // Makes the image fill the parent container
+                            width={400}
+                            height={250}
                             priority={true} 
                         />
                     </div>
