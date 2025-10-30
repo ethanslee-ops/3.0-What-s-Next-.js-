@@ -6,6 +6,7 @@ import {projects} from "../data";
 import Card from "../components/Card";
 import { useScroll } from 'framer-motion'; // 👈 Import useScroll
 import { useRef } from 'react'; // 👈 Import useRef
+import Link from "next/link";
 
 export default function Home() {
     const container = useRef(null); // 👈 1. Create a ref
@@ -16,7 +17,23 @@ export default function Home() {
     });
 
     return (
-        // 3. Assign the ref to your main element
+        <> {/* Use a fragment to wrap the Header and Main */}
+            {/* 1. Add the Navigation Header */}
+            <header className={styles.header}>
+                <div className={styles.navLeft}>
+                    {/* Link 1: About Me (Top Left) */}
+                    <Link href="/about" className={styles.navLink}>
+                        About Me
+                    </Link>
+                </div>
+                <div className={styles.navRight}>
+                    {/* Link 2: Resume (Top Right) */}
+                    <Link href="/resume" className={styles.navLink}>
+                        Resume
+                    </Link>
+                </div>
+            </header>
+
         <main ref={container} className={styles.main}> 
             {
                 projects.map( (project, i) => {
@@ -34,5 +51,6 @@ export default function Home() {
                 })
             }
         </main>
+        </>
     );
 }

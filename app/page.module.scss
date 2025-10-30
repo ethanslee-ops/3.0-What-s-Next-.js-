@@ -1,0 +1,24 @@
+.header {
+    position: fixed; // Keeps the header visible at the top
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    
+    // 👇 CRITICAL FIX: Use Flexbox to align items horizontally
+    display: flex;
+    
+    // 👇 CRITICAL FIX: Pushes the navLeft and navRight containers to the edges
+    justify-content: space-between; 
+    
+    // Aligns items vertically in the center of the header line (optional, but good practice)
+    align-items: center; 
+    
+    z-index: 100; // Ensures the header is above the cards
+}
+
+.navLeft, .navRight {
+    // These containers are already defined to wrap your links in page.tsx
+    display: flex;
+    align-items: center;
+}

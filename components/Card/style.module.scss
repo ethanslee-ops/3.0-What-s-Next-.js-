@@ -24,7 +24,50 @@
     /* Add box shadow or other styling */
 }
 
-/* Add styles for the card content like title/body */
-.body {
-    // ...
+// 1. Ensure the link wrapper fills the entire card
+.cardLink {
+    width: 100%; // 👈 Critical: Fill the card's width
+    height: 100%; // 👈 Critical: Fill the card's height
+    display: flex;
+    // Align items inside the link wrapper (Body)
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+    color: white; 
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
 }
+
+// 2. Ensure the body container fills the link wrapper
+.body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    width: 90%; // 👈 Give it most of the width inside the padding
+    height: 90%; // 👈 Give it most of the height inside the padding
+    align-items: center;
+    justify-content: space-around; // Distribute space between image and title
+}
+
+// 3. Define a clear space for the image relative to the body
+.imageContainer {
+    position: relative; 
+    width: 100%; // 👈 Fill the width of the .body container
+    height: 70%; // 👈 Allocate 70% of the body's height to the image
+    border-radius: 10px;
+    overflow: hidden; 
+    margin-bottom: 15px; 
+}
+
+.navLink {
+    text-decoration: none; // Removes underline
+    color: white; // Set a visible color
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+
+    &:hover {
+        opacity: 0.4; // Simple hover effect
+    }
+}
+
