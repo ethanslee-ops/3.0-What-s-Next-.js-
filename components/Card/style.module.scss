@@ -56,7 +56,11 @@
     height: 70%; // 👈 Allocate 70% of the body's height to the image
     border-radius: 10px;
     overflow: hidden; 
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
+    
+    img {
+        object-fit: contain; // This will maintain aspect ratio
+    }
 }
 
 .navLink {
